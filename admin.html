@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+  <style type="text/css">
+     body{background-image: linear-gradient(to right, #304352,#d7d2cc);}
+     .pointer {cursor: pointer;}
+  </style>
+</head>
+<body>
+
+   <h1 style="padding-left:45%;font-size:200px; "><i class="fa fa-lock" aria-hidden="true"></i></h1>
+
+   <div style="padding-left: 25%; padding-top: 8%;">
+   	   <a href="#" id="doctorsbutton" class="btn btn-primary btn-lg active pointer" role="button" aria-disabled="true">DOCTORS</a>
+   	   <a href="#" id="patientsbutton" class="btn btn-primary btn-lg active pointer" role="button" aria-disabled="true">Patients</a>
+        <a href="#" id="pharmacistbutton" class="btn btn-primary btn-lg active pointer" role="button" aria-disabled="true">Pharmacist</a>
+   	    <a href="#" id="adddoctors" class="btn btn-primary btn-lg active pointer" role="button" aria-disabled="true">Add Doctors</a>
+        <a href="#" id="addpharmacist" class="btn btn-primary btn-lg active pointer" role="button" aria-disabled="true">Add Pharmacists</a>
+       
+   	   
+   </div>
+
+   
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDydOMwnqDMwk9gkidnD0v_GrUgeIoIt5g",
+    authDomain: "fir-project-47972.firebaseapp.com",
+    databaseURL: "https://fir-project-47972.firebaseio.com",
+    projectId: "fir-project-47972",
+    storageBucket: "fir-project-47972.appspot.com",
+    messagingSenderId: "565084627034"
+  };
+  firebase.initializeApp(config);
+
+  const db = firebase.firestore();
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  db.settings(settings);
+
+</script>
+
+     
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="admin.js"></script>
+
+</body>
+</html>

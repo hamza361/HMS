@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOCTORS DATA</title>
+	 <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:700" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+  <style type="text/css">
+     body{background-image: linear-gradient(to right,#12c2e9 ,#c471ed,#f64f59);}
+
+
+  </style>
+
+</head>
+<body>
+
+	<h1 style="padding-left:40%;color:white;font-family: 'Dancing Script', cursive;"><i class="fa fa-user-md" aria-hidden="true"></i> DOCTORS DATA</h1>
+
+	<div>
+		
+	</div>
+ 
+   	<form style="padding-left: 5%; border: 2px solid black;width:50%; margin-left:25%;color:white; padding-top:5%;padding-bottom: 5%; " id="form">
+   		
+   	</form>
+
+	  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDydOMwnqDMwk9gkidnD0v_GrUgeIoIt5g",
+    authDomain: "fir-project-47972.firebaseapp.com",
+    databaseURL: "https://fir-project-47972.firebaseio.com",
+    projectId: "fir-project-47972",
+    storageBucket: "fir-project-47972.appspot.com",
+    messagingSenderId: "565084627034"
+  };
+  firebase.initializeApp(config);
+
+  const db = firebase.firestore();
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  db.settings(settings);
+
+</script>
+
+
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="doctors.js"></script>
+
+
+</body>
+</html>

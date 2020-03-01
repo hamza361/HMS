@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor Login Page</title>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase-firestore.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+
+  <style type="text/css">
+    body{
+
+  background-image: linear-gradient(to right,#FC354C,#0ABFBC);
+  }
+
+.container{
+  margin-top: 0.1%;
+
+  }
+.jumbotron{
+
+  width:50%;
+  margin:0 auto;
+  margin-top:2%;
+  
+  }
+  </style>
+
+</head>
+<body> 
+
+  <h1 style="color:white;font-size:150px; padding-left:45%;padding-top:0.5px;  "><i class="fa fa-user-md" aria-hidden="true"></i></h1>
+
+	<div class="container">
+		<div style="background-image: linear-gradient(to right,#FC354C,#0ABFBC);border-radius:15px 50px 30px;" class="jumbotron">
+			
+ <form>
+    <div class="form-group row">
+    <label for="name" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" placeholder="Name" name="name"  required="true">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="cnic" class="col-sm-2 col-form-label">CNIC</label>
+    <div class="col-sm-10">
+      <input type="tel" class="form-control" id="cnic" placeholder="CNIC" name="cnic" maxlength="13" required="true">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="password" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="password" placeholder="Password" name="password" required="true">
+    </div>
+</div>
+<div class="form-group row">
+    <label for="speciality" class="col-sm-2 col-form-label">Speciality</label>
+    <div class="col-sm-10">
+       <select id="speciality" class="form-control" name="speciality" required>
+        <option selected>Choose...</option>
+        <option value="allergyandimmunology">Allergy and Immunology</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="dermatology">Dermatology</option>
+        <option value="infectiousdisease">Infectious Disease</option>
+      </select>
+    </div>
+</div>
+  
+  	<div class="form-group row">
+    	<div class="col-sm-10">
+        <a style="border-radius:15px" id="loginbutton" class="btn btn-info" href="doctorlogin.html" role="button">Login</a>
+    </div>
+  </div>
+</form>
+
+		</div>
+	</div>
+
+
+ 
+
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDydOMwnqDMwk9gkidnD0v_GrUgeIoIt5g",
+    authDomain: "fir-project-47972.firebaseapp.com",
+    databaseURL: "https://fir-project-47972.firebaseio.com",
+    projectId: "fir-project-47972",
+    storageBucket: "fir-project-47972.appspot.com",
+    messagingSenderId: "565084627034"
+  };
+  firebase.initializeApp(config);
+
+  const db = firebase.firestore();
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  db.settings(settings);
+
+</script>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="doctorlogin.js" defer></script>
+
+
+
+
+</body>
+</html>
